@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Route, Switch } from 'react-router-dom';
+
+import Firstpage from './Firstpage';
+import SecondPage from './SecondPage';
+
+
+
 import './App.css';
+import { GrAction } from "react-icons/gr";
+
+//import { MdEdit } from "react-icons/md";
+
+
+
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Switch>
+        <Route path="/" exact component={Firstpage}></Route>
+        <Route path="/SecondPage" component={SecondPage}></Route>
+
+      </Switch>
     </div>
+
   );
 }
+
+
+
 
 export default App;
