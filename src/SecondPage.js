@@ -34,7 +34,7 @@ function SecondPage() {
   }
   return (
     <div>
-      hello
+    
       <div className="app">
 
         <AppLeft />
